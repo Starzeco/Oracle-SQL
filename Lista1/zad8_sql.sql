@@ -1,0 +1,7 @@
+SELECT IMIE, CASE
+                WHEN (NVL(PRZYDZIAL_MYSZY,0)+NVL(MYSZY_EXTRA, 0))*12 < 660 THEN 'Ponizej 660'
+                WHEN (NVL(PRZYDZIAL_MYSZY,0)+NVL(MYSZY_EXTRA, 0))*12=660 THEN 'Limit'
+                ELSE TO_CHAR((NVL(PRZYDZIAL_MYSZY,0)+NVL(MYSZY_EXTRA, 0))*12)
+            END "Zjada rocznie"
+    FROM KOCURY
+    ORDER BY IMIE;

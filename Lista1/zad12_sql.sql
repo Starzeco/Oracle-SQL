@@ -1,0 +1,5 @@
+SELECT 'Liczba kotow= ' || COUNT(FUNKCJA) || ' lowi jako ' || FUNKCJA || '    i zjada max. ' || MAX(PRZYDZIAL_MYSZY + NVL(MYSZY_EXTRA, 0)) || ' myszy miesiecznie' " "
+FROM KOCURY
+WHERE FUNKCJA != 'SZEFUNIO' AND PLEC = 'D'
+GROUP BY FUNKCJA
+HAVING AVG(PRZYDZIAL_MYSZY + NVL(MYSZY_EXTRA, 0)) > 50

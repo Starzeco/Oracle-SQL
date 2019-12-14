@@ -1,0 +1,11 @@
+SELECT PSEUDO "POLUJE W POLU", PRZYDZIAL_MYSZY "PRZYDZIAL MYSZY", NAZWA "BANDA"
+
+FROM KOCURY K JOIN BANDY B on K.NR_BANDY = B.NR_BANDY AND
+                              B.TEREN IN ('POLE', 'CALOSC') AND
+                              K.PRZYDZIAL_MYSZY > 50;
+
+/*
+
+
+
+ */
